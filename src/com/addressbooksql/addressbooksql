@@ -74,3 +74,17 @@ SQL QUERY :   select count(city),count(state) from addressBook where city ="andh
 OUTPUT    : 22:24:46	select count(city),count(state) from addresssBook where city ="andheri" and state="kanrataka" LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
 
            '1', '1'
+
+
+UC8       :   Ability to retrieve entries sorted alphabetically by Person’s name for a given city
+SQL QUERY :   insert into AddresssBook(first_name,last_name,address,city,state,zip,phone_number,email) value
+                         ("Shreyas","nair","viva college","vasai","Karnataka",400501,784567589,"shreyas@gmail.com");
+              select first_name from addreSssBook where city ="vasai" order by first_name asc;
+
+
+OUTPUT    : 23:10:01	insert into AddresSsBook(first_name,last_name,address,city,state,zip,phone_number,email) value            ("Shreyas","nair","viva college","vasai","Karnataka",400501,784567589,"shreyas@gmail.com")	1 row(s) affected	0.203 sec
+
+            23:10:05	select first_name from addreSssBook where city ="vasai" order by first_name asc LIMIT 0, 1000	2 row(s) returned	0.000 sec / 0.000 sec
+
+            'ganesh'
+            'Shreyas'
