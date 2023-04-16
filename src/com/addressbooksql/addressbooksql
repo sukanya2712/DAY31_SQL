@@ -20,6 +20,8 @@ SQL QUERY :  use addressbook;
 
 OUTPUT    :  20:18:02	create table addresssbook(           first_name varchar(30) not null,           last_name varchar(30) not null,           address varchar(30),           city varchar(30),           state varchar(30),            zip int,            phone_number long,            email varchar(40)            )	0 row(s) affected	0.032 sec
 
+
+
 UC3       :  Ability to insert into a Address Book Table with first names,last names, address, city,state, zip, phone number
              and email as its attributes.
 SQL QUERY :  insert into addresssbook(first_name,last_name,address,city,state,zip,phone_number,email)value
@@ -38,4 +40,20 @@ OUTPUT    :  20:36:04	insert into addresssbook(first_name,last_name,address,city
              tanushree	rai	tanuja complex	borivali	hariyana	401113	9822044449	rai@gmail.com
              mahesh	chavan	gokul complex	andheri	kanrataka	401311	9822066669	mahesh@gmail.com
              priya	raut	bhatia complex	dadar	tamilnadu	401444	9822088899	priya@gmail.com
+
+
+UC4       :  Ability to insert into a Address Book Table with first names,last names, address, city,state, zip, phone number
+             and email as its attributes.
+SQL QUERY :  SET SQL_SAFE_UPDATES = 0;
+             update addresssbook set phone_number =7789978978 where first_name ="sukanya";
+             select * from addresssbook;
+
+OUTPUT    :  21:10:02	update addresssbook set phone_number =7789978978 where first_name ="sukanya"	3 row(s) affected Rows matched: 3  Changed: 3  Warnings: 0	0.125 sec
+
+             # first_name	last_name	address	city	state	zip	phone_number	email
+             'sukanya', 'naik', 'srishti complex', 'virar', 'maharshtra', '401303', '7789978978', 'sukanyanaik@gmail.com'
+             'ganesh', 'patil', 'agarwal complex', 'vasai', 'delhi', '401313', '9768145666', 'ganesh@gmail.com'
+             'tanushree', 'rai', 'tanuja complex', 'borivali', 'hariyana', '401113', '9822044449', 'rai@gmail.com'
+             'mahesh', 'chavan', 'gokul complex', 'andheri', 'kanrataka', '401311', '9822066669', 'mahesh@gmail.com'
+             'priya', 'raut', 'bhatia complex', 'dadar', 'tamilnadu', '401444', '9822088899', 'priya@gmail.com'
 
