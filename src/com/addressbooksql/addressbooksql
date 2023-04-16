@@ -57,3 +57,17 @@ OUTPUT    :  21:10:02	update addresssbook set phone_number =7789978978 where fir
              'mahesh', 'chavan', 'gokul complex', 'andheri', 'kanrataka', '401311', '9822066669', 'mahesh@gmail.com'
              'priya', 'raut', 'bhatia complex', 'dadar', 'tamilnadu', '401444', '9822088899', 'priya@gmail.com'
 
+
+UC5       :  Ability to delete from addresssbook using first_name.
+SQL QUERY :   delete from addresssbook where first_name ="sukanya";
+             select * from addresssbook;
+
+OUTPUT    :  22:08:41	delete from addresssbook where first_name ="sukanya"	3 row(s) affected	0.047 sec
+
+
+             # first_name	last_name	address	city	state	zip	phone_number	email
+             'ganesh', 'patil', 'agarwal complex', 'vasai', 'delhi', '401313', '9768145666', 'ganesh@gmail.com'
+             'tanushree', 'rai', 'tanuja complex', 'borivali', 'hariyana', '401113', '9822044449', 'rai@gmail.com'
+             'mahesh', 'chavan', 'gokul complex', 'andheri', 'kanrataka', '401311', '9822066669', 'mahesh@gmail.com'
+             'priya', 'raut', 'bhatia complex', 'dadar', 'tamilnadu', '401444', '9822088899', 'priya@gmail.com'
+
