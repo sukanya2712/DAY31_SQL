@@ -60,10 +60,17 @@ OUTPUT    :  21:10:02	update addresssbook set phone_number =7789978978 where fir
 
 UC6       :  Ability to retrive persons belonging from addresssbook using first_name.
 SQL QUERY :   select  city, state from addresssbook where city ="vasai" and state ="delhi";
-             select * from addresssbook;
+
 
 OUTPUT    :  22:20:01	select  city, state from addresssbook where city ="vasai" and state ="delhi" LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
 
             'vasai', 'delhi'
 
 
+UC7       :   Ability to understand the size of address book by City and State
+SQL QUERY :   select count(city),count(state) from addressBook where city ="andheri" and state="kanrataka";
+
+
+OUTPUT    : 22:24:46	select count(city),count(state) from addresssBook where city ="andheri" and state="kanrataka" LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+
+           '1', '1'
