@@ -88,3 +88,32 @@ OUTPUT    : 23:10:01	insert into AddresSsBook(first_name,last_name,address,city,
 
             'ganesh'
             'Shreyas'
+
+
+UC9       :   Ability to identify each Address Book with name and Type.
+SQL QUERY :   alter table addresssBook add address_book_name varchar(20) after last_name;
+              alter table addresssBook add type varchar(20) after address_book_name;
+              update addresssBook set address_book_name = "abc" , type = "Family" where first_name in("ganesh","tanushree");
+
+              update addresssBook set address_book_name = "def" , type = "Friends" where first_name in("mahesh","priya","shreyas");
+
+              select * from AddresssBook;
+
+OUTPUT    :  20:33:33	update addresssBook set address_book_name = "abc" , type = "Family"            where first_name in("ganesh","tanushree")	2 row(s) affected Rows matched: 2  Changed: 2  Warnings: 0	0.219 sec
+
+             20:33:38	select * from AddresssBook LIMIT 0, 1000	6 row(s) returned	0.000 sec / 0.000 sec
+
+             20:33:50	update addresssBook set address_book_name = "def" , type = "Friends"            where first_name in("mahesh","priya","shreyas")	4 row(s) affected Rows matched: 4  Changed: 4  Warnings: 0	0.000 sec
+
+             20:33:53	select * from AddresssBook LIMIT 0, 1000	6 row(s) returned	0.000 sec / 0.000 sec
+
+            'ganesh', 'patil', 'abc', 'Family', 'agarwal complex', 'vasai', 'delhi', '401313', '9768145666', 'ganesh@gmail.com'
+            'tanushree', 'rai', 'abc', 'Family', 'tanuja complex', 'borivali', 'hariyana', '401113', '9822044449', 'rai@gmail.com'
+            'mahesh', 'chavan', 'def', 'Friends', 'gokul complex', 'andheri', 'kanrataka', '401311', '9822066669', 'mahesh@gmail.com'
+            'priya', 'raut', 'def', 'Friends', 'bhatia complex', 'dadar', 'tamilnadu', '401444', '9822088899', 'priya@gmail.com'
+            'Shreyas', 'Shetty', 'def', 'Friends', 'MG Road', 'Bengaluru', 'Karnataka', '40001', '784512589', 'shreyas@gmail.com'
+            'Shreyas', 'nair', 'def', 'Friends', 'viva college', 'vasai', 'Karnataka', '400501', '784567589', 'shreyas@gmail.com'
+
+
+
+
