@@ -124,5 +124,27 @@ OUTPUT    :  20:42:14	select count(type) from addresssbook where type = "friends
             '4'
 
 
+UC11      :   Ability to add person to both friend and family
+SQL QUERY :   insert into addresssBook(first_name,last_name,address_book_name,type,address,city,state,zip,phone_number,email)
+              values("Rutik","Hajare","abc","Family","Thane","Thane","Maharashtra",423134,234323,"hajare11@gmail.com"),
+              ("Vishal","Paul","xyz","Friends","Ghatkopar","Thane","Maharashtra",4567891,2343,"paul65@yahoo.in");
+              select *from addresssBook;
+
+OUTPUT    : 20:55:30	insert into addresssBook(first_name,last_name,address_book_name,type,address,city,state,zip,phone_number,email) values("Rutik","Hajare","abc","Family","Thane","Thane","Maharashtra",423134,234323,"hajare11@gmail.com"), ("Vishal","Paul","xyz","Friends","Ghatkopar","Thane","Maharashtra",4567891,2343,"paul65@yahoo.in")	2 row(s) affected Records: 2  Duplicates: 0  Warnings: 0	0.218 sec
+
+            20:55:36	select *from addresssBook LIMIT 0, 1000	8 row(s) returned	0.000 sec / 0.000 sec
+
+            'ganesh', 'patil', 'abc', 'Family', 'agarwal complex', 'vasai', 'delhi', '401313', '9768145666', 'ganesh@gmail.com'
+            'tanushree', 'rai', 'abc', 'Family', 'tanuja complex', 'borivali', 'hariyana', '401113', '9822044449', 'rai@gmail.com'
+            'mahesh', 'chavan', 'def', 'Friends', 'gokul complex', 'andheri', 'kanrataka', '401311', '9822066669', 'mahesh@gmail.com'
+            'priya', 'raut', 'def', 'Friends', 'bhatia complex', 'dadar', 'tamilnadu', '401444', '9822088899', 'priya@gmail.com'
+            'Shreyas', 'Shetty', 'def', 'Friends', 'MG Road', 'Bengaluru', 'Karnataka', '40001', '784512589', 'shreyas@gmail.com'
+            'Shreyas', 'nair', 'def', 'Friends', 'viva college', 'vasai', 'Karnataka', '400501', '784567589', 'shreyas@gmail.com'
+            'Rutik', 'Hajare', 'abc', 'Family', 'Thane', 'Thane', 'Maharashtra', '423134', '234323', 'hajare11@gmail.com'
+            'Vishal', 'Paul', 'xyz', 'Friends', 'Ghatkopar', 'Thane', 'Maharashtra', '4567891', '2343', 'paul65@yahoo.in'
+
+
+
+
 
 
