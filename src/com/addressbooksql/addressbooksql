@@ -115,5 +115,14 @@ OUTPUT    :  20:33:33	update addresssBook set address_book_name = "abc" , type =
             'Shreyas', 'nair', 'def', 'Friends', 'viva college', 'vasai', 'Karnataka', '400501', '784567589', 'shreyas@gmail.com'
 
 
+UC10      :   Ability to get number of contact persons i.e. count by type
+SQL QUERY :   select count(type) from addresssbook where type = "friends";
+
+OUTPUT    :  20:42:14	select count(type) from addresssbook where type = "friends" LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+
+            count(type)
+            '4'
+
+
 
 
